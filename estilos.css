@@ -1,0 +1,314 @@
+
+footer {
+    background-color: rgb(255, 191, 155);
+}
+/*a las clases que creamos se las llama con un punto por delante*/
+.titulos{
+    font: caption;
+    color: crimson;
+}
+.parrafos {    
+    font-style: oblique;
+    color: brown;    
+}
+button:hover{
+
+    background-color: aqua;
+    color:aliceblue;
+    border-color: rgb(0, 255, 157);
+}
+
+.fondoPrincipal {
+    background-color: rgb(255, 244, 224);
+}
+
+
+/*Pagina web*/
+/* Globales */
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{    
+    margin: 0 auto;
+    max-width: 1920px;
+    font-family: 'Lato';
+    color: #333;
+}
+
+.icon-cart{    
+    width: 50px;
+    height: 120px;
+    stroke: #000;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Header */
+header{
+    background-color: rgb(255, 191, 155);
+    font: caption;    
+    font-style: oblique;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;    
+    padding: 30px 15px 10px 15px;
+    align-items:center;
+}
+
+.container-icon{
+    position: relative;
+}
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 100;
+
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos{
+    font-size: 14px;
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 100px;
+    right: 0;
+
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 0px;
+    
+}
+
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+
+    border-bottom: 0px solid rgba(0, 0, 0, 0.20);
+
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart{
+    display: none;
+}
+
+
+
+
+/* Main */
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;        
+}
+
+.item{
+    border-radius: 10px;
+}
+.item2{
+    border-radius: 10px;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+.item2:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+.item img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .4s;
+}
+.item2 img{
+    width: 100%;
+    height: 300px;    
+    object-fit:scale-down;
+    border-radius: 10px 10px 0 0;
+    transition: all .4s;    
+}
+.item figure{
+    overflow: hidden;
+}
+.item2 figure{
+    overflow: hidden;
+}
+
+.item:hover img{
+    transform: scale(1.2);
+}
+.item2:hover img{
+    transform:scale(1.2);
+}
+
+.info-product{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-product button{
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.hidden{
+    display: none;
+}
+
+/*PARA EL MENU DESPLEGABLE*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial';    
+}
+*/
+
+nav{
+    text-align: left;
+	max-width: 900px;
+	margin: auto;
+	background-color: #333;
+	font-size: 20px;
+	margin-top: 50px;
+    
+}
+.menu-horizontal{
+    text-align: left;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+.menu-horizontal > li > a{    
+	display: block;
+	padding: 15px 20px;
+	color: black;
+	text-decoration: none;
+}
+.menu-horizontal > li:hover{    
+	background-color:transparent;
+}
+.menu-vertical{    
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 200px;
+	background-color: rgba(255, 255, 255, 0.911);
+}
+.menu-horizontal li:hover .menu-vertical{    
+	display: block;
+}
+.menu-vertical li:hover{    
+	background-color: rgb(236, 236, 236);
+}
+
+.menu-vertical li a{    
+	display: block;
+	color: black;
+	text-decoration: none;
+	padding: 15px 15px 15px 20px;
+}
+
+#html{
+	margin: auto;
+	padding: 20px;
+	max-width: 900px;
+	background: white;
+
+}
